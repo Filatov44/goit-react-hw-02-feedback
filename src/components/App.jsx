@@ -37,11 +37,10 @@ export default class App extends Component {
   render() {
     const total = this.countTotalFeedback();
     const positivePercent = this.countPositiveFeedbackPercentage();
-    // const onLeaveFeedback = this.onLeaveFeedback;
     const options = ['Good', 'Neutral', 'Bad'];
     return (
       <div>
-        <Section title="Please leave feddback">
+        <Section title="Please leave feedback">
           <FeedbackOptions onLeavFeedback={this.onLeaveFeedback} options={options} />
         </Section>
         { !total ? <Notification message="There is no feedback" /> :
